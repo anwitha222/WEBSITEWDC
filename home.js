@@ -52,28 +52,72 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    // Handle RSVP button click when not logged in
-    const rsvpButtons = document.querySelectorAll(".event-button");
-    rsvpButtons.forEach(button => {
-        button.addEventListener("click", function (event) {
-            if (!isLoggedIn) {
-                event.preventDefault();
-                window.location.href = "login.html";
-            }
-        });
+    // Post creation and display functionality
+    const postForm = document.getElementById("postForm");
+    const postType = document.getElementById("postType");
+    const eventFields = document.getElementById("eventFields");
+    const eventDate = document.getElementById("eventDate");
+    const eventName = document.getElementById("eventName");
+    const postContent = document.getElementById("postContent");
+    const postsList = document.getElementById("postsList");
+
+    postType.addEventListener("change", function () {
+        if (postType.value === "event") {
+            eventFields.style.display = "block";
+        } else {
+            eventFields.style.display = "none";
+        }
     });
 
-    // Handle login form submission on login.html
-    const signUpSubmit = document.getElementById("signUpSubmit");
-    if (signUpSubmit) {
-        signUpSubmit.addEventListener("click", function (event) {
-            event.preventDefault();
-            window.location.href = "signup.html";
-        });
-    }
+    postForm.addEventListener("submit", function (event) {
+        event.preventDefault();
 
+        const post = document.createElement("div");
+        post.classList.add("post");
 
+        const orgName = "Save The Snakes"; // This should be dynamic based on the logged-in organization
+        const username = "JamieSig02"; // This should be dynamic based on the logged-in user
+        const content = postContent.value;
+        const eventDateValue = eventDate.value;
+        const eventNameValue = eventName.value;
 
+        let postHTML = `<p><strong>${orgName}</strong> (${username}) posted:</p>`;
+
+        if (postType.value === "event") {
+            postHTML += `<p><strong>Event Date:</strong> ${eventDateValue}</p>`;
+            postHTML += `<p><strong>Event Name:</strong> ${eventNameValue}</p>`;
+        }
+
+        postHTML += `<p class="post-content">${content.length > 100 ? content.substring(0, 100) + '...' : content}</p>`;
+        if (content.length > 100) {
+            postHTML += `<span class="read-more" data-fullcontent="${content}">Read more</span>`;
+        }
+
+        post.innerHTML = postHTML;
+        postsList.appendChild(post);
+
+        // Clear form after submission
+        postForm.reset();
+        eventFields.style.display = "none";
+    });
+
+    // Handle "Read more" and "Hide" functionality
+    postsList.addEventListener("click", function (event) {
+        if (event.target.classList.contains("read-more")) {
+            const fullContent = event.target.getAttribute("data-fullcontent");
+            const postContentElement = event.target.previousElementSibling;
+            postContentElement.textContent = fullContent;
+            event.target.textContent = "Hide";
+            event.target.classList.remove("read-more");
+            event.target.classList.add("hide");
+        } else if (event.target.classList.contains("hide")) {
+            const fullContent = event.target.getAttribute("data-fullcontent");
+            const postContentElement = event.target.previousElementSibling;
+            postContentElement.textContent = fullContent.substring(0, 100) + '...';
+            event.target.textContent = "Read more";
+            event.target.classList.remove("hide");
+            event.target.classList.add("read-more");
+        }
+    });
 });
-
 
