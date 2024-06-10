@@ -1,0 +1,52 @@
+<!--okay so order of login pages is:
+loginPage -> signUpPage -> either volunteer or organisation
+flows best this way for client, and for coding sake with moving between pages ect-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="project.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+    <script src="project.js" defer></script>
+    <script src="https://kit.fontawesome.com/93824da0aa.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <div class="topnav">
+        <div class="topnav-left">
+          <span class="brand">Compassion Crew</span>
+          <a href="#home" class="nav-link">Home</a>
+          <a href="#events" class="nav-link">Events</a>
+          <a href="#about" class="nav-link">About Us</a>
+        </div>
+      </div>
+
+
+    <div class="login">
+        <h3>Sign into Compassion Crew</h3>
+        <p><input id="email" type="email" placeholder="Email Address"></p>
+
+        <p><input class="password" type="password" placeholder="Password"></p>
+
+        <button class="login-btn" type="button">Login</button>
+
+        <hr>
+        <p>or <button class="login-btn" type="button"> Sign Up </button> </p>
+
+        <p>Sign up with
+            <button class="login-btn" id="withMeta" type="button">Meta <i class="fa-brands fa-meta"></i></button>
+        </p>
+
+    </div>
+
+
+
+</body>
+
+</html>

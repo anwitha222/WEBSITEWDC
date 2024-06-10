@@ -1,0 +1,229 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9ecf9;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* Top Navigation Menu */
+.topnav {
+    background-color: #fff;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 1px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.topnav-left,
+.topnav-right {
+    display: flex;
+    align-items: center;
+}
+
+.topnav-left a {
+    float: left;
+    color: #333;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.topnav-left a.nav-link {
+    color: #333;
+}
+
+.topnav-left a.active {
+    color: #ff69b4;
+}
+
+.topnav-left .brand {
+    font-size: 30px;
+    font-weight: bold;
+    color: #000;
+    margin-right: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.topnav-right .btn {
+    margin-left: 10px;
+    padding: 10px 20px;
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.topnav-right .btn-primary {
+    background-color: #C73765;
+    color: #fff;
+}
+
+.topnav-right .btn-secondary {
+    background-color: #ddd;
+    color: #333;
+}
+
+/* Welcome Message */
+.welcome-message {
+    background-color: #C73765;
+    color: #fff;
+    padding: 1px;
+    text-align: center;
+    font-size: 18px;
+}
+
+/* Header Section with Image */
+.header-section {
+    text-align: center;
+    background-color: #fff;
+    padding: 0;
+}
+
+.header-image {
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+    object-fit: cover;
+}
+
+/* Main Content */
+.events-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+    color: #000;
+    margin: 40px 0 5px 0; /* Reduced margin to decrease gap */
+}
+
+.events-description {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 20px; /* Add some space below the description */
+}
+
+/* Events Section */
+#events {
+    padding: 20px 0px 100px 0px; /* Increased bottom padding to add more gap */
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.event-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.event-card h3 {
+    color: #C73765;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.event-card p {
+    margin: 10px 0;
+    color: #333;
+    font-size: 16px;
+}
+
+.event-button {
+    background-color: #ffb6c1;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    color: #fff;
+    cursor: pointer;
+    margin: 5px 0;
+    width: 100%;
+    border-radius: 5px;
+}
+
+.event-button:hover {
+    background-color: #C73765;
+}
+
+/* Footer */
+.footer-section {
+    background-color: #C73765;
+    color: white;
+    padding: 20px 20px 40px 20px; /* Increased top padding to add more gap */
+}
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-left,
+.footer-right {
+    flex: 1;
+    margin-left: 20px;
+}
+
+.footer-left h3,
+.footer-right h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.footer-left p,
+.footer-right p {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+.footer-right form {
+    display: flex;
+}
+
+.footer-right input[type="email"] {
+    padding: 10px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    width: 70%;
+}
+
+.footer-right button {
+    padding: 10px;
+    background-color: #fff;
+    color: #C73765;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+
+.footer-right button:hover {
+    background-color: #ddd;
+}
