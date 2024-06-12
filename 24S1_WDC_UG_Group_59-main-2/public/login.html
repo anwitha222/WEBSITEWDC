@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="stylesheets/home.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <meta name="google-signin-client_id" content="YOUR_GOOGLE_CLIENT_ID">
+    <script src="javascripts/home.js" defer></script>
+    <script src="javascripts/login.js" defer></script>
+</head>
+<body>
+<div class="login">
+    <h3>Sign into Compassion Crew</h3>
+    <form action="/auth" method="post">
+        <label for="username"><i class="fas fa-user"></i></label>
+        <input type="text" name="username" placeholder="Username" id="username" required>
+        <label for="password"><i class="fas fa-lock"></i></label>
+        <input type="password" name="password" placeholder="Password" id="password" required>
+        <input type="submit" value="Login">
+    </form>
+    <hr>
+    <p>or <button id="signUpSubmit" class="login-btn" type="button" onclick="window.location.href='signup.html'">Sign Up</button></p>
+    <div class="g-signin2" data-onsuccess="onSignIn"></div>
+</div>
+</body>
+</html>

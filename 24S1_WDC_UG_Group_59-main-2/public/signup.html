@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="stylesheets/home.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <meta name="google-signin-client_id" content="YOUR_GOOGLE_CLIENT_ID">
+    <script defer src="javascripts/signup.js"></script>
+</head>
+<body>
+<div class="login">
+    <h3>Join Compassion Crew</h3>
+    <p><input name="Login" id="Volunteer" type="radio" value="volunteer"> <strong>Volunteer</strong></p>
+    <p><input name="Login" id="Organiser" type="radio" value="organiser"> <strong>Organiser</strong></p>
+    <p><input id="username" type="text" placeholder="Username"></p>
+    <p><input id="firstName" type="text" placeholder="First Name"></p>
+    <p><input id="lastName" type="text" placeholder="Last Name"></p>
+    <p><input id="email" type="email" placeholder="Email Address"></p>
+    <p><input id="password" type="password" placeholder="Enter Password"></p>
+    <p><input id="passwordConfirm" type="password" placeholder="Confirm Password"></p>
+    <button class="login-btn" type="button" onclick="handleSignUp()">Sign Up!</button>
+    <hr>
+    <p>or sign up with</p>
+    <div class="g-signin2" data-onsuccess="onSignIn" data-width="240" data-height="50" data-longtitle="true"></div>
+</div>
+</body>
+</html>
